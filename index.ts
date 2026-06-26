@@ -156,10 +156,26 @@ type c = A & {
     c: string
 };
 //! type literal
-
+// error, success , fail
+type TStatus = "error" | "success" | "fail";
+ let responseStatus: TStatus = "error"
+ responseStatus = "fail"
+responseStatus = "success"
 
 
 //! function
+const greet = (name: String) => {
+    console.log("Hellow ", name);
+    
+}
+greet("Nabin")
+console.log(greet);
+// 
+const add = (a: number, b: number): number => {
+    return a + b;
+
+};
+
 
 //! class
 
