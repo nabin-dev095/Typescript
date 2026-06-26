@@ -78,9 +78,86 @@ let users: [number, string, string, number, string][] = [
 ]
 
 //* object
+// let product: {
+//     _id: number;
+//     name: string;
+//     description: string;
+//     price: number;
+
+// } = {
+//     _id: 1,
+//     name: "product",
+//     description: "prodcut",
+//     price: 1200
+
+// }
+
+// let product2: {
+//     _id: number;
+//     name: string;
+//     description: string;
+//     price: number;
+
+// } = {
+//     _id: 2,
+//     name: "product",
+//     description: "prodcut",
+//     price: 1200
+
+// }
+
+
 //! type alias
 
+// type Tproduct: {
+//     _id: number;
+//     name: string;
+//     description: string;
+//     price: number;
+
+// } 
+
+// let product: Tproduct = {
+//     _id: number;
+//     name: string;
+//     description: string;
+//     price: number;
+
+// } = {
+//     _id: 1,
+//     name: "product",
+//     description: "prodcut",
+//     price: 1200
+
+// }
+
+//* union |
+type ID = number | string ;
+let id: ID  = 1;
+id = ""
+
+type TU = { name: string, email: string};
+let userArr: TU[] = [
+    { email: "", name: ""},
+    { email: "", name: ""},
+    { email: "", name: ""}
+]
+
+//* intersection &
+type A = {
+    a: String
+}
+
+type B = {
+    b: string
+}
+ //type c = A & B;
+type c = A & {
+    c: string
+};
 //! type literal
+
+
 
 //! function
 
