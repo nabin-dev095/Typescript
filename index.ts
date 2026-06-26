@@ -164,7 +164,7 @@ responseStatus = "success"
 
 
 //! function
-const greet = (name: String) => {
+const greet = (name: String): void => { // when we not return then void write
     console.log("Hellow ", name);
     
 }
@@ -181,6 +181,43 @@ const add = (a: number, b: number): number => {
 
 //! interface
 
+interface IUser {
+    readonly _id: string | number;
+    name: string;
+    email: string;
+    password: string;
+    phone?: string
+
+}
+
+let user: IUser = {
+    _id: "1",
+    email: "",
+    name: "",
+    password: ""
+}
+
+
+//diff between type and interface 
+// declaration merge
+
 //! generic type
 
-// afno git hub ma push garne public rakha ne
+interface IBox<T> {
+    value: T;
+}
+
+let stringBox:  IBox<string> = {
+    value: "box",
+}
+
+let numberBox: IBox<number> = {
+    value: 12
+}
+
+let Box: IBox<{ x: number; y: string}> = {
+    value: {
+        x: 12,
+         y: "23"
+    }
+}
